@@ -1,0 +1,26 @@
+<table>
+	<thead>
+		<th>Priority</th>
+		<th>Number</th>
+		<th>Date add</th>
+		<th>Title</th>
+		<th>Author</th>
+		<th>Project ID</th>
+		<th>Actions</th>
+	</thead>
+	<tbody>
+	<!-- // -- lista wszystkich projektów -->
+		<?php foreach ($data as $item): ?>
+		<tr>
+			<td><?php echo $item->priority; ?></td>
+			<td>#<?php echo $item->id; ?></td>
+			<td><?php echo $item->dateAdd; ?></td>
+			<td><a href="?controller=task&action=task&id=<?php echo $item->id; ?>"><?php echo $item->title; ?></a></td>
+			<td><?php echo $item->authorFirst; ?> <?php echo $item->authorLast; ?></td>
+			<td><?php echo $item->idProject; ?></td>
+			<td><a href="?controller=project&action=setProjectDone&id=<?php echo $item->id; ?>"><img src='img/done.png'></a> <a href="?controller=project&action=setProjectUnactive&id=<?php echo $item->id; ?>"><img src='img/delete.png'></a>
+			</td>
+		</tr>
+		<?php endforeach; ?>
+	</tbody>
+</table>

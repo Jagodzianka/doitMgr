@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 
+<head>
+	<LINK href="css/style.css" rel="stylesheet" type="text/css"> 
+	<title>do !t - relational database</title> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+</head>
+
+<body>
+	<div id="header">
+		<span id="logo"><a href='http://localhost/mgr/index.php'><img src="img/logo.png"></a></span>
+		<span id="login_logout"><a href="#"><img src="img/key.png"> Login/Logout</a></span>
+	</div>
+	<div id="menu">
+		<span class="menu_links">
+			<a href="index.php?controller=project"><img src="img/project.png"> Projects </a> 
+			<a href="index.php?controller=task"><img src="img/task.png"> Tasks </a> 
+			<a href="index.php?controller=task&action=market"><img src="img/market.png"> Market</a>
+		</span>
+		<span class="menu_newTask">
+			<a href='index.php?action=projectList'><img src='img/add.png'> Add New </a>
+		<!--<?php
+			//if(isset($_GET['id']) and($_GET['id'])=='tasks')
+			//{	
+			//	echo "<a href='lib/model/project.php?type=add'><img src='img/add.png'> New Task </a>";
+			//}
+			//if(isset($_GET['id']) and($_GET['id'])=='projects')
+			//{	
+			//	echo "<a href='lib/model/project.php?type=add'><img src='img/add.png'> New Project </a>";
+			//}
+		?>-->
+		</span>
+	</div>
+	<div id="main">
+
+<?php echo $main; ?>
+
+	</div>
+</body>
+</html>
